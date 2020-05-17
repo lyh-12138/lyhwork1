@@ -1,3 +1,5 @@
+//æ­¤æ³¨é‡Šä¸ºæ–°æ’å…¥ç”¨äºï¼šGithubæ‹‰å–æµ‹è¯•
+//å¤©æ°”å†³ç­–æ ‘
 #include <iostream>
 #include <vector> 
 #include <string>
@@ -10,18 +12,18 @@
 #include<iomanip>
 using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-//Êı¾İ½Úµã 
+//æ•°æ®èŠ‚ç‚¹ 
 class WeatherData{
 private:
-	int num;//±àºÅ 
-	string tiankuan;//Ìì¿ö 
-	string wendu;//ÎÂ¶È 
-	string shidu;//Êª¶È 
-	string fengkuan;//·ç¿ö 
-	char fenlei;//·ÖÀà 
+	int num;//ç¼–å· 
+	string tiankuan;//å¤©å†µ 
+	string wendu;//æ¸©åº¦ 
+	string shidu;//æ¹¿åº¦ 
+	string fengkuan;//é£å†µ 
+	char fenlei;//åˆ†ç±» 
 public:
-	WeatherData(){}//Ä¬ÈÏ¹¹Ôìº¯Êı 
-	WeatherData(int n, string t, string w, string s, string fk, char fl){//¹¹Ôìº¯Êı 
+	WeatherData(){}//é»˜è®¤æ„é€ å‡½æ•° 
+	WeatherData(int n, string t, string w, string s, string fk, char fl){//æ„é€ å‡½æ•° 
 		num = n;
 		tiankuan = t;
 		wendu = w;
@@ -29,25 +31,25 @@ public:
 		fengkuan = fk;
 		fenlei = fl;
 	}
-	int getNum(){//·µ»Ø±àºÅ
+	int getNum(){//è¿”å›ç¼–å·
 		return this->num;
 	}
-	string getTiankuan(){//·µ»ØÌì¿ö
+	string getTiankuan(){//è¿”å›å¤©å†µ
 		return this->tiankuan;
 	}
-	string getWendu(){//·µ»ØÎÂ¶È
+	string getWendu(){//è¿”å›æ¸©åº¦
 		return this->wendu;
 	}
-	string getShidu(){//·µ»ØÊª¶È
+	string getShidu(){//è¿”å›æ¹¿åº¦
 		return this->shidu;
 	}
-	string getFengkuan(){//·µ»Ø·ç¿ö
+	string getFengkuan(){//è¿”å›é£å†µ
 		return this->fengkuan;
 	}
-	char getFenlei(){//·µ»Ø·ÖÀà
+	char getFenlei(){//è¿”å›åˆ†ç±»
 		return this->fenlei;
 	}
-	WeatherData(const WeatherData &d){//¿½±´¹¹Ôìº¯Êı 
+	WeatherData(const WeatherData &d){//æ‹·è´æ„é€ å‡½æ•° 
 		num = d.num;
 		tiankuan = d.tiankuan;
 		wendu = d.wendu;
@@ -55,53 +57,53 @@ public:
 		fengkuan = d.fengkuan;
 		fenlei = d.fenlei;
 	}
-	~WeatherData(){}//Îö¹¹º¯Êı
+	~WeatherData(){}//ææ„å‡½æ•°
 };
-//¾ö²ßÊ÷½Úµã 
+//å†³ç­–æ ‘èŠ‚ç‚¹ 
 class TreeNode{
 private:
-	string NodeValue;//¼ÇÂ¼¸ù½ÚµãÖµ 
-	vector<string>side;//¼ÇÂ¼±ß 
-	vector<TreeNode*>childs;//¼ÇÂ¼×Ó½Úµã 
-	int decision;//½øĞĞ¾ö²ß 
+	string NodeValue;//è®°å½•æ ¹èŠ‚ç‚¹å€¼ 
+	vector<string>side;//è®°å½•è¾¹ 
+	vector<TreeNode*>childs;//è®°å½•å­èŠ‚ç‚¹ 
+	int decision;//è¿›è¡Œå†³ç­– 
 public:
 	TreeNode(){
 	NodeValue="NO";
 	decision = 0;
 	}
-	void putNodeValue(string nv){//Ğ´Èë¸ù½ÚµãÊôĞÔÖµ 
+	void putNodeValue(string nv){//å†™å…¥æ ¹èŠ‚ç‚¹å±æ€§å€¼ 
 		this->NodeValue = nv;
 	}
-	void putSide(vector<string>s){//Ğ´Èë±ß 
+	void putSide(vector<string>s){//å†™å…¥è¾¹ 
 		this->side = s;
 	}
-	void putChilds(vector<TreeNode*>c){//Ğ´Èë½Úµã 
+	void putChilds(vector<TreeNode*>c){//å†™å…¥èŠ‚ç‚¹ 
 		this->childs = c;
 	}
-	void putDecision(int dec){//Ğ´Èë¾ö²ß½á¹û 
+	void putDecision(int dec){//å†™å…¥å†³ç­–ç»“æœ 
 		this->decision = dec;
 	}
-	vector<TreeNode*> getChilds(){//·µ»Ø×Ó½Úµã 
+	vector<TreeNode*> getChilds(){//è¿”å›å­èŠ‚ç‚¹ 
 		return this->childs;
 	}
-	string getNodeValue(){//·µ»Ø½ÚµãÖµ 
+	string getNodeValue(){//è¿”å›èŠ‚ç‚¹å€¼ 
 		return this->NodeValue;
 	}
-	vector<string> getSide(){//·µ»Ø±ß 
+	vector<string> getSide(){//è¿”å›è¾¹ 
 		return this->side;
 	}
-	TreeNode(TreeNode &n){//¿½±´¹¹Ôìº¯Êı 
+	TreeNode(TreeNode &n){//æ‹·è´æ„é€ å‡½æ•° 
 		NodeValue = n.NodeValue;
 		side = n.side;
 		childs = n.childs;
 	}
 	~TreeNode(){}
 };
-typedef vector<WeatherData> Weather;//×Ô¶¨ÒåÀà¶ÔÏóÈİÆ÷ 
-Weather obj;//¸ÃÈİÆ÷ÓÃÀ´´æ´¢±íÊ¾ÌìÆøµÄ¶ÔÏó 
-vector<string> character;//¸ÃÈİÆ÷ÓÃÀ´´æ´¢±íÊ¾ÌìÆøÊôĞÔµÄ×Ö·û
-TreeNode* root = NULL;//³õÊ¼»¯È«¾ÖÊ÷¸ù½Úµã¶ÔÏó 
-//³õÊ¼»¯objºÍcharacter£º´ÓÎÄ¼şÖĞ¶ÁÈëÒ»ÌõÌìÆøÊı¾İ£¬½«Æä¸³Öµ¸øÒ»¸öÀà¶ÔÏó²¢´æ´¢ÔÚÀà¶ÔÏóÈİÆ÷ÖĞ 
+typedef vector<WeatherData> Weather;//è‡ªå®šä¹‰ç±»å¯¹è±¡å®¹å™¨ 
+Weather obj;//è¯¥å®¹å™¨ç”¨æ¥å­˜å‚¨è¡¨ç¤ºå¤©æ°”çš„å¯¹è±¡ 
+vector<string> character;//è¯¥å®¹å™¨ç”¨æ¥å­˜å‚¨è¡¨ç¤ºå¤©æ°”å±æ€§çš„å­—ç¬¦
+TreeNode* root = NULL;//åˆå§‹åŒ–å…¨å±€æ ‘æ ¹èŠ‚ç‚¹å¯¹è±¡ 
+//åˆå§‹åŒ–objå’Œcharacterï¼šä»æ–‡ä»¶ä¸­è¯»å…¥ä¸€æ¡å¤©æ°”æ•°æ®ï¼Œå°†å…¶èµ‹å€¼ç»™ä¸€ä¸ªç±»å¯¹è±¡å¹¶å­˜å‚¨åœ¨ç±»å¯¹è±¡å®¹å™¨ä¸­ 
 void setWeatherData(){
 	ifstream in;
 	int num = 0;
@@ -110,7 +112,7 @@ void setWeatherData(){
 	string sd = "";
 	string fk = "";
 	char fl;
-	in.open("F:\\vs2017\\ÌìÆø¾ö²ßÊ÷\\weatherForecast.txt", ios::in);
+	in.open("F:\\vs2017\\å¤©æ°”å†³ç­–æ ‘\\weatherForecast.txt", ios::in);
 	if (!in.is_open()){
 		cout << "can not open the file!" << endl;
 		exit(0);
@@ -126,46 +128,46 @@ void setWeatherData(){
 			obj.push_back(dd);
 		}
 	}
-	character.push_back("Ìì¿ö");
-	character.push_back("ÎÂ¶È");
-	character.push_back("Êª¶È");
-	character.push_back("·ç¿ö");
-	character.push_back("·ÖÀà");
+	character.push_back("å¤©å†µ");
+	character.push_back("æ¸©åº¦");
+	character.push_back("æ¹¿åº¦");
+	character.push_back("é£å†µ");
+	character.push_back("åˆ†ç±»");
 }
-//¼ÆËãÏãÅ¨ìØ 
+//è®¡ç®—é¦™æµ“ç†µ 
 double calculateS(Weather &X){
-	int n = X.size();//»ñÈ¡ÈİÆ÷´óĞ¡ 
+	int n = X.size();//è·å–å®¹å™¨å¤§å° 
 	int i = 0;
-	map<char, int>NOP;//¶¨ÒåÒ»¸öÓ³Éä±í£¬¸Ã±íÓĞÁ½¸öÖµ£¬µÚÒ»¸öÖµÎªkey,µÚ¶ş¸öÎªvalue 
-	for (i = 0; i<n; i++){//³õÊ¼»¯±í£¬Í³¼Æ·ÖÀà 
+	map<char, int>NOP;//å®šä¹‰ä¸€ä¸ªæ˜ å°„è¡¨ï¼Œè¯¥è¡¨æœ‰ä¸¤ä¸ªå€¼ï¼Œç¬¬ä¸€ä¸ªå€¼ä¸ºkey,ç¬¬äºŒä¸ªä¸ºvalue 
+	for (i = 0; i<n; i++){//åˆå§‹åŒ–è¡¨ï¼Œç»Ÿè®¡åˆ†ç±» 
 		NOP[X[i].getFenlei()] = 0;
 	}
-	for (i = 0; i<n; i++){//Í³¼ÆÃ¿¸ö·ÖÀà£º¼ÇÂ¼¸ÃÈİÆ÷ÖĞ·ÖÀàÎªN»òPµÄ´ÎÊı 
+	for (i = 0; i<n; i++){//ç»Ÿè®¡æ¯ä¸ªåˆ†ç±»ï¼šè®°å½•è¯¥å®¹å™¨ä¸­åˆ†ç±»ä¸ºNæˆ–Pçš„æ¬¡æ•° 
 		NOP[X[i].getFenlei()] += 1;
 	}
-	double shanno = 0;//¼ÆËãÏãÅ¨ìØ 
+	double shanno = 0;//è®¡ç®—é¦™æµ“ç†µ 
 	map<char, int>::iterator it;
 	for (it = NOP.begin(); it != NOP.end(); it++){
 		double prob = (double)(it->second) / (double)n;
 		shanno -= prob*(log(prob) / log(2));
 	}
-	return shanno;//·µ»Ø½á¹û 
+	return shanno;//è¿”å›ç»“æœ 
 }
-//¸ù¾İÊôĞÔ¶ÔÕû¸ö¶ÔÏóÀàÈİÆ÷½øĞĞ²ğ·Ö£¬Èç¸ù¾İÌì¿ö£¬²ğ·ÖµÃµ½Ìì¿öÖĞÊôĞÔÎªÇçµÄ¶ÔÏó 
+//æ ¹æ®å±æ€§å¯¹æ•´ä¸ªå¯¹è±¡ç±»å®¹å™¨è¿›è¡Œæ‹†åˆ†ï¼Œå¦‚æ ¹æ®å¤©å†µï¼Œæ‹†åˆ†å¾—åˆ°å¤©å†µä¸­å±æ€§ä¸ºæ™´çš„å¯¹è±¡ 
 Weather splitDataSet(Weather &X, string bestfeature, string value) {
 	Weather result;
 	int n = X.size();
 	int flag = 0;
-	if (bestfeature == "Ìì¿ö"){
+	if (bestfeature == "å¤©å†µ"){
 		flag = 1;
 	}
-	else if (bestfeature == "ÎÂ¶È") {
+	else if (bestfeature == "æ¸©åº¦") {
 		flag = 2;
 	}
-	else if (bestfeature == "Êª¶È") {
+	else if (bestfeature == "æ¹¿åº¦") {
 		flag = 3;
 	}
-	else if (bestfeature == "·ç¿ö") {
+	else if (bestfeature == "é£å†µ") {
 		flag = 4;
 	}
 	for (int i = 0; i<n; i++){
@@ -194,55 +196,55 @@ Weather splitDataSet(Weather &X, string bestfeature, string value) {
 	}
 	return result;
 }
-//Ñ¡È¡ÊôĞÔ¼¯ÖĞµÄÊôĞÔÖµ£¬±ÈÈçÊôĞÔÌì¿ö£¬¸Ãº¯Êı¿ÉÓÃÓÚÍ³¼ÆÆäÊôĞÔÖµ£¬ÈçÇç£¬ÒõµÈ 
+//é€‰å–å±æ€§é›†ä¸­çš„å±æ€§å€¼ï¼Œæ¯”å¦‚å±æ€§å¤©å†µï¼Œè¯¥å‡½æ•°å¯ç”¨äºç»Ÿè®¡å…¶å±æ€§å€¼ï¼Œå¦‚æ™´ï¼Œé˜´ç­‰ 
 vector<string> featureValue(Weather &X, string feature){
-	vector<string>featureList;//·ÅÖÃÊôĞÔÖµµÄÈİÆ÷ 
-	set<string>s;//¶¨ÒåÒ»¸ö¼¯ºÏ£¬Ä¿µÄÔÚÓÚÏû³ıÖØ¸´µÄÊôĞÔÖµ 
+	vector<string>featureList;//æ”¾ç½®å±æ€§å€¼çš„å®¹å™¨ 
+	set<string>s;//å®šä¹‰ä¸€ä¸ªé›†åˆï¼Œç›®çš„åœ¨äºæ¶ˆé™¤é‡å¤çš„å±æ€§å€¼ 
 	int n = X.size();
 	int i = 0;
 	for (i = 0; i<n; i++) {
-		if (feature == "Ìì¿ö"){
+		if (feature == "å¤©å†µ"){
 			s.insert(X[i].getTiankuan());
 		}
-		else if (feature == "ÎÂ¶È") {
+		else if (feature == "æ¸©åº¦") {
 			s.insert(X[i].getWendu());
 		}
-		else if (feature == "Êª¶È") {
+		else if (feature == "æ¹¿åº¦") {
 			s.insert(X[i].getShidu());
 		}
-		else if (feature == "·ç¿ö") {
+		else if (feature == "é£å†µ") {
 			s.insert(X[i].getFengkuan());
 		}
 	}
-	set<string>::iterator it;//Í¨¹ı¼¯ºÏÏû³ıÈİÆ÷ÖĞÖØ¸´ÔªËØµÄ¹ı³Ì 
+	set<string>::iterator it;//é€šè¿‡é›†åˆæ¶ˆé™¤å®¹å™¨ä¸­é‡å¤å…ƒç´ çš„è¿‡ç¨‹ 
 	for (it = s.begin(); it != s.end(); it++) {
 		featureList.push_back(*it);
 	}
 	return featureList;
 }
-//Ñ¡Ôñ×îºÃµÄÌØÕ÷×÷Îª¸ù½Úµã 
+//é€‰æ‹©æœ€å¥½çš„ç‰¹å¾ä½œä¸ºæ ¹èŠ‚ç‚¹ 
 string chooseBestFeature(Weather &X, vector<string> characters){
 	int n = character.size() - 1;
-	double bestEntropy = calculateS(X);  //³õÊ¼ÏãÅ©ìØ£¨M(C)) 
-	double bestInfoGain = 0;   //×î´óµÄĞÅÏ¢ÔöÒæ
-	string bestFeature;       //×îºÃµÄÌØÕ÷
+	double bestEntropy = calculateS(X);  //åˆå§‹é¦™å†œç†µï¼ˆM(C)) 
+	double bestInfoGain = 0;   //æœ€å¤§çš„ä¿¡æ¯å¢ç›Š
+	string bestFeature;       //æœ€å¥½çš„ç‰¹å¾
 	int i;
 	vector<string>featureList;
 	for (i = 0; i<n; i++){
-		double newEntropy = 0;//¸÷·ÖÖ§Ìõ¼şìØ(B(C))
-		featureList = featureValue(X, characters[i]);//»ñÈ¡Ä³ÊôĞÔµÄÊôĞÔÖµ 
-		for (int j = 0; j<featureList.size(); j++) {//¶ÔÊôĞÔÖµ½øĞĞÑ­»· 
-			Weather subData = splitDataSet(X, character[i], featureList[j]);//É¸Ñ¡·ûºÏµ±Ç°ÊôĞÔµÄÀà¶ÔÏó 
-			double prob = (double)subData.size() / (double)X.size();//¼ÆËã¸ÅÂÊ 
-			newEntropy += prob * calculateS(subData);//¼ÆËãËüµÄÌõ¼şìØ 
+		double newEntropy = 0;//å„åˆ†æ”¯æ¡ä»¶ç†µ(B(C))
+		featureList = featureValue(X, characters[i]);//è·å–æŸå±æ€§çš„å±æ€§å€¼ 
+		for (int j = 0; j<featureList.size(); j++) {//å¯¹å±æ€§å€¼è¿›è¡Œå¾ªç¯ 
+			Weather subData = splitDataSet(X, character[i], featureList[j]);//ç­›é€‰ç¬¦åˆå½“å‰å±æ€§çš„ç±»å¯¹è±¡ 
+			double prob = (double)subData.size() / (double)X.size();//è®¡ç®—æ¦‚ç‡ 
+			newEntropy += prob * calculateS(subData);//è®¡ç®—å®ƒçš„æ¡ä»¶ç†µ 
 		}
-		double gain = bestEntropy - newEntropy;//ĞÅÏ¢ÔöÒæ 
+		double gain = bestEntropy - newEntropy;//ä¿¡æ¯å¢ç›Š 
 		if (gain >= bestInfoGain){
-			bestInfoGain = gain;//»ñÈ¡×î¼ÑĞÅÏ¢ÔöÒæ 
-			bestFeature = characters[i];//Ñ¡Ôñ×î¼ÑÊôĞÔ 
+			bestInfoGain = gain;//è·å–æœ€ä½³ä¿¡æ¯å¢ç›Š 
+			bestFeature = characters[i];//é€‰æ‹©æœ€ä½³å±æ€§ 
 		}
 	}
-	//Ã¿È·¶¨Ò»¸öÊôĞÔ£¬½«´ÓÊôĞÔ¼¯ÖĞÈ¥µô¸ÃÊôĞÔ 
+	//æ¯ç¡®å®šä¸€ä¸ªå±æ€§ï¼Œå°†ä»å±æ€§é›†ä¸­å»æ‰è¯¥å±æ€§ 
 	vector<string>::iterator it;
 	for (it = character.begin(); it != character.end(); it++){
 		if (*it == bestFeature){
@@ -250,54 +252,54 @@ string chooseBestFeature(Weather &X, vector<string> characters){
 			break;
 		}
 	}
-	return bestFeature;//·µ»ØÑ¡¶¨µÄ×î¼ÑÊôĞÔ¼¯ 
+	return bestFeature;//è¿”å›é€‰å®šçš„æœ€ä½³å±æ€§é›† 
 }
 TreeNode* createDicisionTree(TreeNode*root, Weather &X){
 	int i;
-	vector<string>characters;//¸ù¾İ¸ÃÈİÆ÷½øĞĞ¸ù½ÚµãÉ¸Ñ¡£¬Ã¿É¸Ñ¡Ò»´Î£¬ÊôĞÔ¼õÒ»
+	vector<string>characters;//æ ¹æ®è¯¥å®¹å™¨è¿›è¡Œæ ¹èŠ‚ç‚¹ç­›é€‰ï¼Œæ¯ç­›é€‰ä¸€æ¬¡ï¼Œå±æ€§å‡ä¸€
 	characters = character;
-	if (root == NULL){//ÅĞ¶Ï¾ö²ßÊ÷ÊÇ·ñ´æÔÚ
-		root = new TreeNode();//µ±¾ö²ßÊ÷²»´æÔÚÊ±ĞÂ½¨Ò»¸ö½Úµã£¬×÷Îª¾ö²ßÊ÷µÄ¸ù½Úµã
+	if (root == NULL){//åˆ¤æ–­å†³ç­–æ ‘æ˜¯å¦å­˜åœ¨
+		root = new TreeNode();//å½“å†³ç­–æ ‘ä¸å­˜åœ¨æ—¶æ–°å»ºä¸€ä¸ªèŠ‚ç‚¹ï¼Œä½œä¸ºå†³ç­–æ ‘çš„æ ¹èŠ‚ç‚¹
 	}
-	set<char>s;//È·¶¨¸Ã·ÖÀàÏÂµÄÊı¾İÊÇ·ñ¶¼ÊôÓÚÍ¬Ò»Àà£º²éÖØ 
+	set<char>s;//ç¡®å®šè¯¥åˆ†ç±»ä¸‹çš„æ•°æ®æ˜¯å¦éƒ½å±äºåŒä¸€ç±»ï¼šæŸ¥é‡ 
 	int num = X.size();
 	for (i = 0; i<num; i++){
-		s.insert(X[i].getFenlei());//sÀàĞÍÎª¼¯ºÏ£¬ÓÃs¼ÇÂ¼Êı¾İ¼¯ÖĞµÄ·ÖÀà£¬¸ù¾İ¼¯ºÏµÄÎŞĞòĞÔ¿ÉÒÔÅĞ¶Ï£¬·ÖÀàÊÇ·ñÎ¨Ò»
+		s.insert(X[i].getFenlei());//sç±»å‹ä¸ºé›†åˆï¼Œç”¨sè®°å½•æ•°æ®é›†ä¸­çš„åˆ†ç±»ï¼Œæ ¹æ®é›†åˆçš„æ— åºæ€§å¯ä»¥åˆ¤æ–­ï¼Œåˆ†ç±»æ˜¯å¦å”¯ä¸€
 	}
-	if (s.size() == 1){//Èç¹û·ÖÀàÎ¨Ò»£¬»®·Ö½áÊø£¬ÎŞĞèÔÚÏòÏÂ»®·Ö
+	if (s.size() == 1){//å¦‚æœåˆ†ç±»å”¯ä¸€ï¼Œåˆ’åˆ†ç»“æŸï¼Œæ— éœ€åœ¨å‘ä¸‹åˆ’åˆ†
 		if (*s.begin() == 'N'){
-			int dec = -1;//-1±íÊ¾¸Ã·ÖÖ§ÏÂµÄ·ÖÀàÖĞ£¬ËùÓĞ·ÖÀà¶¼ÎªN
+			int dec = -1;//-1è¡¨ç¤ºè¯¥åˆ†æ”¯ä¸‹çš„åˆ†ç±»ä¸­ï¼Œæ‰€æœ‰åˆ†ç±»éƒ½ä¸ºN
 			root->putDecision(dec);
 		}
 		else{
-			int dec = 1;//1±íÊ¾¸Ã·ÖÖ§ÏÂµÄ·ÖÀàÖĞ£¬ËùÓĞ·ÖÀà¶¼ÎªP
+			int dec = 1;//1è¡¨ç¤ºè¯¥åˆ†æ”¯ä¸‹çš„åˆ†ç±»ä¸­ï¼Œæ‰€æœ‰åˆ†ç±»éƒ½ä¸ºP
 			root->putDecision(dec);
 		}
 		return root;
 	}
-	else{//Èç¹û·ÖÀà²»Î¨Ò»£¬±íÊ¾¸Ã·ÖÖ§ÏÂµÄÊı¾İ¼¯»¹¿É¼ÌĞø»®·Ö
-		root->putDecision(0);//¼ÇÂ¼¸Ã·ÖÖ§ÏÂÊı¾İ²»Î¨Ò»
+	else{//å¦‚æœåˆ†ç±»ä¸å”¯ä¸€ï¼Œè¡¨ç¤ºè¯¥åˆ†æ”¯ä¸‹çš„æ•°æ®é›†è¿˜å¯ç»§ç»­åˆ’åˆ†
+		root->putDecision(0);//è®°å½•è¯¥åˆ†æ”¯ä¸‹æ•°æ®ä¸å”¯ä¸€
 	}
-	if (characters.size() == 1 && s.size() != 1){//µ±ËùÓĞÊôĞÔ»®·ÖÍê£¬µ«ÊÇ·ÖÀàÈÔÈ»²»Î¨Ò»£¬»®·ÖÊ§°Ü
-		cout << "¾ö²ßÊ÷¹¹½¨Ê§°Ü!Ê§°ÜÔ­Òò£ºµ±Ç°Ê÷½ÚµãÎŞ·¨¼ÌĞøÏòÏÂ·ÖÀàÇÒµ±Ç°½ÚµãÏÂµÄ·ÖÀà²»Î¨Ò»" << endl;
+	if (characters.size() == 1 && s.size() != 1){//å½“æ‰€æœ‰å±æ€§åˆ’åˆ†å®Œï¼Œä½†æ˜¯åˆ†ç±»ä»ç„¶ä¸å”¯ä¸€ï¼Œåˆ’åˆ†å¤±è´¥
+		cout << "å†³ç­–æ ‘æ„å»ºå¤±è´¥!å¤±è´¥åŸå› ï¼šå½“å‰æ ‘èŠ‚ç‚¹æ— æ³•ç»§ç»­å‘ä¸‹åˆ†ç±»ä¸”å½“å‰èŠ‚ç‚¹ä¸‹çš„åˆ†ç±»ä¸å”¯ä¸€" << endl;
 		exit(0);
 	}
-	string bestFeature = chooseBestFeature(X, characters);//Ñ¡È¡Ò»¸öÊôĞÔ×÷Îª¸ù½Úµã 
-	root->putNodeValue(bestFeature);//¸üĞÂ¾ö²ßÊ÷½Úµã¶ÔÓ¦µÄÊôĞÔ 
-	vector<string>featureList = featureValue(X, bestFeature);//»ñÈ¡¸ÃÊôĞÔµÄÊôĞÔÖµ
-	root->putSide(featureList);//¸üĞÂ¾ö²ßÊ÷½Úµã¶ÔÓ¦µÄ±ß 
-	vector<TreeNode*>childs;//¶¨ÒåÒ»¸ö×Ó½Úµã¼¯£¬ÎªÃ¿¸ö±ß¶ÔÓ¦ÏÂµÄ×Ó½Úµã
+	string bestFeature = chooseBestFeature(X, characters);//é€‰å–ä¸€ä¸ªå±æ€§ä½œä¸ºæ ¹èŠ‚ç‚¹ 
+	root->putNodeValue(bestFeature);//æ›´æ–°å†³ç­–æ ‘èŠ‚ç‚¹å¯¹åº”çš„å±æ€§ 
+	vector<string>featureList = featureValue(X, bestFeature);//è·å–è¯¥å±æ€§çš„å±æ€§å€¼
+	root->putSide(featureList);//æ›´æ–°å†³ç­–æ ‘èŠ‚ç‚¹å¯¹åº”çš„è¾¹ 
+	vector<TreeNode*>childs;//å®šä¹‰ä¸€ä¸ªå­èŠ‚ç‚¹é›†ï¼Œä¸ºæ¯ä¸ªè¾¹å¯¹åº”ä¸‹çš„å­èŠ‚ç‚¹
 	int n = featureList.size();
-	for (i = 0; i<n; i++){//Í¨¹ıÊôĞÔÖµÏòÏÂ»®·ÖÊı¾İ¼¯
-		Weather subData = splitDataSet(X,bestFeature, featureList[i]);//É¸Ñ¡·ûºÏ·ûºÏÊôĞÔÖµµÄÊı¾İ¼¯
-		TreeNode*newNode = new TreeNode();//ÎªÃ¿¸öÊôĞÔÖµ´´½¨Ò»¸öĞÂ½Úµã
-		childs.push_back(newNode);//ĞÂ½ÚµãÌí¼Óµ½ÈİÆ÷
-		createDicisionTree(newNode, subData);//µİ¹éÏòÏÂ»®·Ö
+	for (i = 0; i<n; i++){//é€šè¿‡å±æ€§å€¼å‘ä¸‹åˆ’åˆ†æ•°æ®é›†
+		Weather subData = splitDataSet(X,bestFeature, featureList[i]);//ç­›é€‰ç¬¦åˆç¬¦åˆå±æ€§å€¼çš„æ•°æ®é›†
+		TreeNode*newNode = new TreeNode();//ä¸ºæ¯ä¸ªå±æ€§å€¼åˆ›å»ºä¸€ä¸ªæ–°èŠ‚ç‚¹
+		childs.push_back(newNode);//æ–°èŠ‚ç‚¹æ·»åŠ åˆ°å®¹å™¨
+		createDicisionTree(newNode, subData);//é€’å½’å‘ä¸‹åˆ’åˆ†
 	}
 	root->putChilds(childs);
 	return root;
 }
-//´òÓ¡¾ö²ßÊ÷ 
+//æ‰“å°å†³ç­–æ ‘ 
 void printTree(TreeNode*root,Weather &X,int p){
 	int i = 0, j = 0, n = 0, m = 0 , x=0;
 	vector<string> side;
@@ -309,12 +311,12 @@ void printTree(TreeNode*root,Weather &X,int p){
 	for (x = 0; x < p; x++){
 		cout << '\t';
 	}
-	cout <<"½Úµã£º"<<root->getNodeValue() << endl;
+	cout <<"èŠ‚ç‚¹ï¼š"<<root->getNodeValue() << endl;
 	if (n == m){
 		for (x = 0; x < p; x++){
 			cout << '\t';
 		}
-		cout << "·ÖÖ§£º" << '\n' ;
+		cout << "åˆ†æ”¯ï¼š" << '\n' ;
 		for (i = 0; i < n; i++){
 			for (x = 0; x < p; x++){
 				cout << '\t';
@@ -342,7 +344,7 @@ void printTree(TreeNode*root,Weather &X,int p){
 		}
 	}
 }
-//³·Ïú¾ö²ßÊ÷ 
+//æ’¤é”€å†³ç­–æ ‘ 
 void freeTree(TreeNode*root){
 	vector<TreeNode*>c = root->getChilds();
 	int n = c.size();
@@ -362,7 +364,7 @@ int main(int argc, char *argv[]) {
 			<< it->getFengkuan() << "  " << it->getFenlei() << endl;
 	}*/
 	root=createDicisionTree(root, obj);
-	cout << "¸Ã¾ö²ßÊ÷Îª£º" << endl;
+	cout << "è¯¥å†³ç­–æ ‘ä¸ºï¼š" << endl;
 	printTree(root,obj,0);
 	freeTree(root);
 	root = NULL;
